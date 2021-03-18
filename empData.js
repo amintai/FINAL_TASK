@@ -18,3 +18,33 @@
     
 }
 
+function getModelData(){
+  var skill = document.forms["modelForm"]["headSkill"].value
+  
+  //document.getElementById('h3').innerHTML=skill
+  
+  var ul = document.getElementById('head')
+  
+  ul.appendChild(document.createTextNode(`${skill}`))
+  localStorage.setItem("headSkill" , skill)
+  
+  var br = document.getElementById('br')
+  
+  
+  var selected = []
+  var select = document.querySelectorAll('input[type=checkbox]:checked')
+  
+  for(var i=0 ; i< select.length ;i++) {
+    selected.push(select[i].value)
+    var li = document.createElement('li',selected)
+  }
+  li.appendChild(document.createTextNode(selected))
+  ul.appendChild(li)
+  
+  localStorage.setItem("selectedSkill",selected)
+  //document.getElementById('h6').innerHTML=selected
+  
+  //console.log(totalHeadSkills)
+}
+
+

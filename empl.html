@@ -3,7 +3,8 @@
         <title>Registration form</title>
         <body>
           <h1>Skills</h1>
-            
+          <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
+          <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.bundle.min.js"></script>
           <style>
 
 
@@ -74,9 +75,86 @@ input[type=text], input[type=password] {
 </head>
 <body>
   
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Add Skills
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Your Skills</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" name="modelForm">
+        <!-- <label for="skill">Skills</label>
+        <input type="text" class="form-control col-lg" name="headSkill" placeholder="Fronted Bakcend Full Stack"> -->
+        <select name="headSkill" class="form-select" aria-label="Default select example">
+          <option selected>Select Domains</option>
+          <option value="frontend">Frontend</option>
+          <option value="backend">Backend</option>
+          <option value="fullstack">Fullstack</option>
+        </select>
+        <br><br>
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="css">
+          <label class="form-check-label" for="inlineCheckbox1">CSS</label>
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="html">
+          <label class="form-check-label" for="inlineCheckbox1">HTML</label>
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="javascript">
+          <label class="form-check-label" for="inlineCheckbox1">Javascript</label>
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="java">
+          <label class="form-check-label" for="inlineCheckbox1">Java</label>
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="php">
+          <label class="form-check-label" for="inlineCheckbox1">PHP</label>
+        </div>
+        
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="python">
+          <label class="form-check-label" for="inlineCheckbox1">Python</label>
+        </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        <button onclick="return getModelData();" type="button" class="btn btn-primary">Save</button>
+      </div>
+
+    </form>
+    </div>
+  </div>
+</div>
+
+<div>
+<ul class="ml-2" id="head">
   
-  
-  
+  <li class="ml-3" id="child">
+    
+  </li>
+</ul>
+<br id="br">
+
+
+</div>
+<!--   
   <button id="myBtn">Add skills</button>
   <header>:
     <input type="text" id="show" name="skills"><br>
@@ -132,66 +210,67 @@ input[type=text], input[type=password] {
         
   </div>
 
-</div>
+<!-- </div> -->
 
-<script>
+<!-- <script> -->
  
 
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
+<!-- // var modal = document.getElementById("myModal");
+// var btn = document.getElementById("myBtn");
 
 
-var span = document.getElementsByClassName("close")[0];
+// var span = document.getElementsByClassName("close")[0];
 
 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
 
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
 
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+<!-- //     modal.style.display = "none";
     
-  }
-}
-</script>
+//   } -->
+<!-- // } --> -->
+<!-- </script> -->
+ <!-- --> 
 
-<ul id="printHere">
+<!-- <ul id="printHere">
 
 </ul>
-<script>
+<script> -->
 
-    function print() {
-        var x = document.getElementById("mi");
-        console.log(x.value);//test to see if it works
-        document.getElementById("printHere").innerHTML = x;
+<!-- //     function print() {
+//         var x = document.getElementById("mi");
+//         console.log(x.value);//test to see if it works
+//         document.getElementById("printHere").innerHTML = x;
 
-    }
+//     }
 
-    function setAsList(){
-        var x = document.getElementById("mi");
-        console.log(x.value);//test to see if it works
-        document.getElementById("printHere").innerHTML = "<li>" + x.value + "</li>";
-    }
+//     function setAsList(){
+//         var x = document.getElementById("mi");
+//         console.log(x.value);//test to see if it works
+//         document.getElementById("printHere").innerHTML = "<li>" + x.value + "</li>";
+//     }
 
-    function addToList() {
-        var x = document.getElementById("mi");
-        console.log(x.value);//test to see if it works
-        document.getElementById("printHere").innerHTML += "<li>" + x.value + "</li>";
-    }
-    function myFunction(){
+//     function addToList() {
+//         var x = document.getElementById("mi");
+//         console.log(x.value);//test to see if it works
+//         document.getElementById("printHere").innerHTML += "<li>" + x.value + "</li>";
+//     }
+//     function myFunction(){
 
-    var textnode = document.createTextNode("html");
-  node.appendChild(textnode);
-  document.getElementById("mi").appendChild(node);
-}
-    
+//     var textnode = document.createTextNode("html");
+//   node.appendChild(textnode);
+//   document.getElementById("mi").appendChild(node);
+// }
+     <!-- --> 
 
 
 </script>
@@ -263,14 +342,14 @@ listNode.appendChild(liNode);
     <label>Job summary</label>
 <input type="text" name="jobSummary" placeholder="summary" maxlength="300">
 <br>
-<a href="join.html">
-<button type="go back">go back</button>
+<a href="./join.html">
+<button class="btn btn-danger" type="go back">go back</button>
 </a>
-<button type="save details" id="button1" >save details</button>
+<button type="save details" class="btn btn-success" id="button1" >save details</button>
 
 <!-- <a href="./lastpage.html">Go</a> -->
 <a href="./lastpage.html">
-<button type="button" value="click" id="button1" onclick ="return getEmployee();" >generate</button>
+<button type="button" class="btn btn-primary" value="click" id="button1" onclick ="return getEmployee();" >generate</button>
 </a>
 
 </a>
