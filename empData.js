@@ -19,10 +19,13 @@
 }
 
 function getModelData(){
+
   var skill = document.forms["modelForm"]["headSkill"].value
-  
+
+  var type = document.forms["modelForm"]["typedSkill"].value
+  localStorage.setItem("typedSkill",type)
   //document.getElementById('h3').innerHTML=skill
-  
+
   var ul = document.getElementById('head')
   
   ul.appendChild(document.createTextNode(`${skill}`))
@@ -46,5 +49,11 @@ function getModelData(){
   
   //console.log(totalHeadSkills)
 }
+
+// function addHeadSkill() {
+//   var skill = document.forms["modelForm"]["headSkill"].value
+//   var newUl = document.getElementById('newUl')
+//   ul.appendChild(document.createTextNode(skill))
+// }
 
 

@@ -28,7 +28,7 @@
           // get skills
           var headSkill = localStorage.getItem("headSkill")
           var childSkill = localStorage.getItem("selectedSkill")
-          
+          var typedSkill = localStorage.getItem("typedSkill")
           //console.log(empStatus,seekingJob,jobSummary,jobTittle)
 
            var dataImage = localStorage.getItem('profilePicture');
@@ -45,7 +45,7 @@
                 document.write(`<br><h3 class="text-danger">My Skill and experties </h3>`)
                 document.write(` <h3 class="text-success"> => ${headSkill} </h3>`);
                 document.write(`<h3 class="text-success"> ==>${childSkill}</h3>`)
-                
+                document.write(`<h3 class ="text-success">===>${typedSkill}</h3>`)
                 
                 
                 </script>
