@@ -1,6 +1,61 @@
 <html>
   <head>
         <title>Registration form</title>
+        <script type="text/javascript">
+
+//           function getModelData(){
+
+//   var skill = document.forms["modelForm"]["headSkill"].value
+
+//   var type = document.forms["modelForm"]["typedSkill"].value
+//   localStorage.setItem("typedSkill",type)
+//   //document.getElementById('h3').innerHTML=skill
+// //-----------child code
+//   // var ul = document.getElementById('head')
+  
+//   // ul.appendChild(document.createTextNode(`${skill}`))
+//   // localStorage.setItem("headSkill" , skill)
+  
+//   //-----------child End code
+//   var br = document.getElementById('br')
+  
+  
+// // var node = document.createElement("LI");
+// //     var textnode = document.createTextNode("Water");
+// //     node.appendChild(textnode);
+// //     document.getElementById("myList").appendChild(node);
+
+//   var selected = []
+//   var select = document.querySelectorAll('input[type=checkbox]:checked')
+  
+//   for(var i=0 ; i< select.length ;i++) {
+//     selected.push(select[i].value)
+//     var li = document.createElement('li',selected)
+//   }
+//   li.appendChild(document.createTextNode(selected))
+//   ul.appendChild(li)
+  
+//   localStorage.setItem("selectedSkill",selected)
+//   //document.getElementById('h6').innerHTML=selected
+  
+//   //console.log(totalHeadSkills)
+// }
+
+
+
+
+//             function getModelLiData() {
+
+//               getModelData();
+
+//                 var ul = document.getElementById('head')
+            
+//                 var d = ul.appendChild(document.createTextNode(`${skill}`))
+//                 console.log(d);
+//                 //localStorage.setItem("headSkill" , skill)
+//            }
+        </script>
+      </head>
         <body>
           <h1>Skills</h1>
           <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
@@ -71,7 +126,7 @@ input[type=text], input[type=password] {
   cursor: pointer;
 }
 </style>
-<script src="./empData.js"></script>
+
 </head>
 <body>
   
@@ -95,13 +150,14 @@ input[type=text], input[type=password] {
           
         <!-- <label for="skill">Skills</label>
         <input type="text" class="form-control col-lg" name="headSkill" placeholder="Fronted Bakcend Full Stack"> -->
-        <select name="headSkill" class="form-select" aria-label="Default select example">
-          <option selected>Select Domains</option>
+        <select name="headSkill" id="dept" class="form-select" aria-label="Default select example">
+          <option selected >Select Domains</option>
           <option value="frontend">Frontend</option>
           <option value="backend">Backend</option>
           <option value="fullstack">Fullstack</option>
-        </select>
-                
+        </select><br><br>
+        <button onclick="getModelLiData()" type="button" class="btn btn-primary">Add</button>   
+         <button onchnage="check()"  type="button" class="btn btn-primary">Save</button>     
         <br><br>
         <label for="typedSkill">Skill</label>
           <input type="text" name="typedSkill" >
@@ -136,9 +192,10 @@ input[type=text], input[type=password] {
         </div>
         
       </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-        <button onclick="return getModelData();" type="button" class="btn btn-primary">Save</button>
+       
       </div>
 
     </form>
@@ -147,15 +204,37 @@ input[type=text], input[type=password] {
 </div>
 
 <div>
+<ul>
+  <li id="myList"></li>
+    <ul>
+      <li id="myList1"></li>
+    </ul>
+  </li>
+</ul>
 
-<ul class="ml-2" id="head">
+<ul>
+  <li id="myListRe"></li>
+    <ul>
+      <li id="myList1Re"></li>
+    </ul>
+  </li>
+</ul>
+<!-- <ul class="ml-2" id="head">
   
   <li class="ml-3" id="child">
     
   </li>
 </ul>
-<br id="br">
-
+<br id="br"> -->
+  
+<!-- <ul>
+  <li id="br"></li>
+  <li>
+    <ul>
+      <li id="br"></li>
+    </ul>
+  </li>
+</ul> -->
 
 </div>
 <!--   
@@ -362,3 +441,5 @@ listNode.appendChild(liNode);
         </body>
     </head>
 </html>
+
+<script src="./empData.js"></script>
