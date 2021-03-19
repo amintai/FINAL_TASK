@@ -117,7 +117,7 @@ function getModelLiData(){
     if(dept == "frontend") {
 
        // var frontendLi = document.getElementById('myList1')
-       
+       localStorage.setItem("childFrontendSkills" , JSON.stringify(selected))
        var node = document.createElement("LI");
         var textnode = document.createTextNode(selected);
         node.appendChild(textnode);
@@ -125,12 +125,14 @@ function getModelLiData(){
       
       }
       else if(dept == "backend") {
+        localStorage.setItem("childBackendSkills" ,JSON.stringify(selected))
         var node = document.createElement("LI");
         var textnode = document.createTextNode(selected);
         node.appendChild(textnode);
         document.getElementById("myList1Re").appendChild(node);
      } else if(dept == "other") {
-      var type = document.forms["modelForm"]["typedSkill"].value
+       var type = document.forms["modelForm"]["typedSkill"].value
+       localStorage.setItem("childOtherSkills" , JSON.stringify(type))
         var p =document.getElementById('otherP')
         p.innerHTML = type
     //   var node = document.createElement("P");
@@ -154,4 +156,9 @@ function getModelLiData(){
   // document.getElementById('h6').innerHTML=selected
   
   // console.log(totalHeadSkills)
+}
+
+function deleteSkills(){
+    var del = document.getElementById('delete')
+    del.remove()
 }

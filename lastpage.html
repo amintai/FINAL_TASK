@@ -26,10 +26,16 @@
           var jobSummary = localStorage.getItem("jobSummary")
 
           // get skills
-          var headSkill = localStorage.getItem("headSkill")
-          var childSkill = localStorage.getItem("selectedSkill")
-          var typedSkill = localStorage.getItem("typedSkill")
+          var FrontEndSkill = localStorage.getItem("FrontEndSkill")
+          var BackEndSkill = localStorage.getItem("BackEndSkill")
+          var OtherSkill = localStorage.getItem("OtherSkill")
+          
+
+        var childFrontendSKills = JSON.parse(localStorage.getItem("childFrontendSkills"))
+        var childBackendSkills = JSON.parse(localStorage.getItem("childBackendSkills"))
+        var childOtherSkills = localStorage.getItem("childOtherSkills")
           //console.log(empStatus,seekingJob,jobSummary,jobTittle)
+            //
 
            var dataImage = localStorage.getItem('profilePicture');
           var actImage =  dataImage.split("\\").pop()
@@ -40,12 +46,18 @@
           
           document.write(`<h4 class="text-primary">Hello i am : <strong class="text-success">${firstName}</strong>  Middle Name : <strong class="text-success">${middleName}</strong> Last Name  : <strong class="text-success">${lastName} </strong> i've done my in Education : <strong class="text-success">${education}</strong> and my  Email is  : <strong class="text-success"> ${email} </strong> i am from Address : <strong class="text-success">${address}</strong> and my birthdate is Date  : <strong class="text-success">${date}</strong> Gender : <strong class="text-success">${gender}</strong> , my Phone Number is : <strong class="text-success"> ${phoneNumber}</strong>  Number Type : <strong class="text-success">${numberType} </strong></h1>`)
             
-            document.write(`<h4 class="text-primary"><br><br> My Employeement statusEmployee Status : <strong class="text-success"> ${empStatus}</strong>, Seeking Job : <strong class="text-success"> ${seekingJob} </strong>, Job Tittle : <strong class="text-success"> ${jobTittle}</strong> , job Type : <strong class="text-success">${jobType}</strong> , Job Summary : <strong class="text-success"> ${jobSummary}</strong>
+            document.write(`<h4 class="text-primary"><br><br> My Employeement status <strong class='text-success'> ${empStatus} </strong>Employee Status : <strong class="text-success"> ${empStatus}</strong>, Seeking Job : <strong class="text-success"> ${seekingJob} </strong>, Job Tittle : <strong class="text-success"> ${jobTittle}</strong> , job Type : <strong class="text-success">${jobType}</strong> , Job Summary : <strong class="text-success"> ${jobSummary}</strong>
                 </h4>`)
                 document.write(`<br><h3 class="text-danger">My Skill and experties </h3>`)
-                document.write(` <h3 class="text-success"> => ${headSkill} </h3>`);
-                document.write(`<h3 class="text-success"> ==>${childSkill}</h3>`)
-                document.write(`<h3 class ="text-success">===>${typedSkill}</h3>`)
+                document.write(` <h3 class="text-success">Frontend  => ${FrontEndSkill} </h3>`);
+                document.write(` <h3 class="text-success">  ===> ${childFrontendSKills} </h3>`);
+
+                document.write(`<h3 class="text-success">Backend =>${BackEndSkill}</h3>`)
+                document.write(` <h3 class="text-success">  ===> ${childBackendSkills} </h3>`);
+
+
+                document.write(`<h3 class ="text-success">Others=>${childOtherSkills}</h3>`)
+                
                 
                 
                 </script>
