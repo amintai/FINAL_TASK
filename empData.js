@@ -68,9 +68,11 @@ function getModelData(){
 // }
 
 
-function getModelLiData(){
 
-    var dept = document.getElementById('dept').value;
+function getModelLiData(){
+ 
+  var dept = document.getElementById('dept').value;
+ 
     if(dept=="frontend") {
       localStorage.setItem("FrontEndSkill" , dept)
 
@@ -106,6 +108,7 @@ function getModelLiData(){
   
   
   function skillsGet(){
+    var type = document.forms["modelForm"]["typedSkill"].value
     
     var selected = []
     var select = document.querySelectorAll('input[type=checkbox]:checked')
@@ -114,32 +117,37 @@ function getModelLiData(){
     for(var i=0 ; i< select.length ;i++) {
       selected.push(select[i].value)
     }
+    
+    alert(`${selected}${type}`)
     if(dept == "frontend") {
 
        // var frontendLi = document.getElementById('myList1')
+       selected.push(type)
+       alert(selected)
        localStorage.setItem("childFrontendSkills" , JSON.stringify(selected))
+
        var node = document.createElement("LI");
         var textnode = document.createTextNode(selected);
         node.appendChild(textnode);
         document.getElementById("myList1").appendChild(node);
-      
+
       }
       else if(dept == "backend") {
+       
+        selected.push(type)
+        alert(selected)
         localStorage.setItem("childBackendSkills" ,JSON.stringify(selected))
         var node = document.createElement("LI");
         var textnode = document.createTextNode(selected);
         node.appendChild(textnode);
         document.getElementById("myList1Re").appendChild(node);
      } else if(dept == "other") {
-       var type = document.forms["modelForm"]["typedSkill"].value
+//       var type = document.forms["modelForm"]["typedSkill"].value
        localStorage.setItem("childOtherSkills" , JSON.stringify(type))
         var p =document.getElementById('otherP')
         p.innerHTML = type
-    //   var node = document.createElement("P");
-    //   var textnode = document.createTextNode(type);
-    //   node.appendChild(textnode);
-    //   document.getElementById("other").appendChild(node);
-    //  
+ 
+  
      }
 
      
@@ -161,4 +169,14 @@ function getModelLiData(){
 function deleteSkills(){
     var del = document.getElementById('delete')
     del.remove()
+}
+
+function appendOptions(){
+  var option = document.createElement('option')
+  //option.text = "Text";
+  option.value = "myvalue"
+  var dynamicSelect = document.getElementById("dept")
+  dynamicSelect.appendChild(option)
+
+ 
 }
