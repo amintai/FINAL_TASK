@@ -1,59 +1,114 @@
-  function getEmployee() {
-    var empStatus = document.forms["employee"]["empStatus"].value
-    var seekingJob = document.forms["employee"]["seekingJob"].value
-    var jobTittle = document.forms["employee"]["jobTittle"].value
-    var jobType = document.forms["employee"]["jobType"].value
-    var jobSummary = document.forms["employee"]["jobSummary"].value
+//   function getEmployee() {
+//     var empStatus = document.forms["employee"]["empStatus"].value
+//     var seekingJob = document.forms["employee"]["seekingJob"].value
+//     var jobTittle = document.forms["employee"]["jobTittle"].value
+//     var jobType = document.forms["employee"]["jobType"].value
+//     var jobSummary = document.forms["employee"]["jobSummary"].value
     
-    alert(`${empStatus} ${seekingJob} ${jobTittle} ${jobType} ${jobSummary}`)
-    // var getSkill = document.forms["employee"]["add"].value
-    // alert(getSkill)
-    localStorage.setItem("empStatus", empStatus);
-    localStorage.setItem("seekingJob" , seekingJob);
-    localStorage.setItem("jobTittle", jobTittle);
-    localStorage.setItem("jobType", jobType);
-    localStorage.setItem("jobSummary" , jobSummary)
-    localStorage.setItem("getSkill",getSkill)
+//     alert(`${empStatus} ${seekingJob} ${jobTittle} ${jobType} ${jobSummary}`)
+//     // var getSkill = document.forms["employee"]["add"].value
+//     // alert(getSkill)
+//     localStorage.setItem("empStatus", empStatus);
+//     localStorage.setItem("seekingJob" , seekingJob);
+//     localStorage.setItem("jobTittle", jobTittle);
+//     localStorage.setItem("jobType", jobType);
+//     localStorage.setItem("jobSummary" , jobSummary)
+//     localStorage.setItem("getSkill",getSkill)
 
     
-}
+// }
+// function getModelLiData() {
 
-function getModelData(){
+//       // getModelData();
 
-  var skill = document.forms["modelForm"]["headSkill"].value
+//       var ul = document.getElementById('head')
+  
+//       var d = ul.appendChild(document.createTextNode(skill))
+//       console.log(d);
+//       localStorage.setItem("headSkill" , skill)
 
-  var type = document.forms["modelForm"]["typedSkill"].value
-  localStorage.setItem("typedSkill",type)
-  //document.getElementById('h3').innerHTML=skill
 
-  var ul = document.getElementById('head')
+// // var node = document.createElement("LI");
+// //     var textnode = document.createTextNode('${skill}');
+// //     node.appendChild(textnode);
+// //     document.getElementById("myList").appendChild(node);
+//  }
+
+
+// function getModelData(){
+
+//   var skill = document.forms["modelForm"]["headSkill"].value
+
+//   var type = document.forms["modelForm"]["typedSkill"].value
+//   localStorage.setItem("typedSkill",type)
+//   //document.getElementById('h3').innerHTML=skill
+// //-----------child code
+//   // var ul = document.getElementById('head')
   
-  ul.appendChild(document.createTextNode(`${skill}`))
-  localStorage.setItem("headSkill" , skill)
+//   // ul.appendChild(document.createTextNode(`${skill}`))
+//   // localStorage.setItem("headSkill" , skill)
   
-  var br = document.getElementById('br')
+//   //-----------child End code
+//   var br = document.getElementById('br')
   
+//   }
+// // var node = document.createElement("LI");
+// //     var textnode = document.createTextNode("Water");
+// //     node.appendChild(textnode);
+// //     document.getElementById("myList").appendChild(node);
+
+//   // var selected = []
+//   // var select = document.querySelectorAll('input[type=checkbox]:checked')
   
-  var selected = []
-  var select = document.querySelectorAll('input[type=checkbox]:checked')
+//   // for(var i=0 ; i< select.length ;i++) {
+//   //   selected.push(select[i].value)
+//   //   var li = document.createElement('li',selected)
+//   // }
+//   // li.appendChild(document.createTextNode(selected))
+//   // ul.appendChild(li)
   
-  for(var i=0 ; i< select.length ;i++) {
-    selected.push(select[i].value)
-    var li = document.createElement('li',selected)
-  }
-  li.appendChild(document.createTextNode(selected))
-  ul.appendChild(li)
+//   // localStorage.setItem("selectedSkill",selected)
+//   //document.getElementById('h6').innerHTML=selected
   
-  localStorage.setItem("selectedSkill",selected)
-  //document.getElementById('h6').innerHTML=selected
-  
-  //console.log(totalHeadSkills)
-}
+//   //console.log(totalHeadSkills)
+// }
+
+
+ 
 
 // function addHeadSkill() {
 //   var skill = document.forms["modelForm"]["headSkill"].value
 //   var newUl = document.getElementById('newUl')
 //   ul.appendChild(document.createTextNode(skill))
 // }
+
+
+function getModelLiData(){
+
+    var dept = document.getElementById('dept').value;
+    if(dept=="frontend") {
+
+
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(dept);
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+    } else {
+      var node = document.createElement("LI");
+        var textnode = document.createTextNode(dept);
+        node.appendChild(textnode);
+        document.getElementById("myList1").appendChild(node);
+    }
+
+}
+
+  function check() {
+
+      var d = document.getElementById('inlineCheckbox1').value;  
+      var node1 = document.createElement("LI");
+      var textnode1 = document.createTextNode(d);
+      node1.appendChild(textnode1);
+      document.getElementById("myList").appendChild(node1);
+  }
 
 
