@@ -154,13 +154,13 @@ input[type=text], input[type=password] {
           <option selected >Select Domains</option>
           <option value="frontend">Frontend</option>
           <option value="backend">Backend</option>
-          <option value="fullstack">Fullstack</option>
+          <option value="other">other</option>
         </select><br><br>
         <button onclick="getModelLiData()" type="button" class="btn btn-primary">Add</button>   
-         <button onchnage="check()"  type="button" class="btn btn-primary">Save</button>     
         <br><br>
+
         <label for="typedSkill">Skill</label>
-          <input type="text" name="typedSkill" >
+        <input type="text" name="typedSkill" >
         <div class="form-check form-check-inline">
           <input class="form-check-input" name="skill" type="checkbox" id="inlineCheckbox1" value="css">
           <label class="form-check-label" for="inlineCheckbox1">CSS</label>
@@ -192,10 +192,10 @@ input[type=text], input[type=password] {
         </div>
         
       </div>
-
+      
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-       
+        <button onclick="skillsGet()" type="button" class="btn btn-primary">Save</button>     
       </div>
 
     </form>
@@ -218,6 +218,11 @@ input[type=text], input[type=password] {
       <li id="myList1Re"></li>
     </ul>
   </li>
+</ul>
+
+<ul id="">
+  <li id="otherDiv"></li>    
+  <li id="otherP"></li>
 </ul>
 <!-- <ul class="ml-2" id="head">
   
@@ -317,10 +322,10 @@ input[type=text], input[type=password] {
 
 // window.onclick = function(event) {
 //   if (event.target == modal) {
-<!-- //     modal.style.display = "none";
+ //     modal.style.display = "none";
     
 //   } -->
-<!-- // } --> -->
+<!-- // } --> 
 <!-- </script> -->
  <!-- --> 
 
